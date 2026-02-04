@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조직도 | 동환그룹</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 커서 효과 -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">동환그룹</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="about.html">회사소개</a></li>
+                <li><a href="business.html">사업영역</a></li>
+                <li><a href="history.html">연혁</a></li>
+                <li><a href="organization.html" class="active">조직도</a></li>
+                <li><a href="contact.html">연락처</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 모바일 메뉴 -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="about.html">회사소개</a></li>
+            <li><a href="business.html">사업영역</a></li>
+            <li><a href="history.html">연혁</a></li>
+            <li><a href="organization.html">조직도</a></li>
+            <li><a href="contact.html">연락처</a></li>
+        </ul>
+    </div>
+
+    <!-- 페이지 헤더 -->
+    <section class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <span class="page-label">ORGANIZATION</span>
+                <h1>조직도</h1>
+                <p>동환그룹의 조직 구성을 소개합니다</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 조직도 -->
+    <section class="org-section">
+        <div class="container">
+            <div class="org-chart-modern">
+                <!-- 의장 -->
+                <div class="org-level level-1 reveal">
+                    <div class="org-member chairman">
+                        <div class="member-avatar">
+                            <div class="avatar-circle">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                    <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <span class="member-position">의장</span>
+                            <h3 class="member-name">이인선</h3>
+                        </div>
+                        <div class="member-decoration"></div>
+                    </div>
+                </div>
+
+                <!-- 연결선 -->
+                <div class="org-connector-vertical"></div>
+                <div class="org-connector-horizontal"></div>
+
+                <!-- 팀 레벨 -->
+                <div class="org-level level-2">
+                    <div class="org-member reveal">
+                        <div class="member-avatar">
+                            <div class="avatar-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <span class="member-position">마케팅 팀장</span>
+                            <h3 class="member-name">이재영</h3>
+                        </div>
+                    </div>
+
+                    <div class="org-member reveal">
+                        <div class="member-avatar">
+                            <div class="avatar-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14 2V8H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <span class="member-position">비서</span>
+                            <h3 class="member-name">조경민</h3>
+                        </div>
+                    </div>
+
+                    <div class="org-member mascot reveal">
+                        <div class="member-avatar">
+                            <div class="avatar-circle">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <span class="member-position">마스코트</span>
+                            <h3 class="member-name">황승환</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 팀 소개 -->
+    <section class="team-intro">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="label">OUR TEAM</span>
+                <h2>함께하는 사람들</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-card reveal">
+                    <div class="team-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>경영진</h3>
+                    <p>풍부한 경험과 혁신적인 리더십으로 회사를 이끌어갑니다</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M8 21H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M12 17V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>마케팅팀</h3>
+                    <p>브랜드 가치를 높이고 시장을 선도하는 전략을 수립합니다</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M4.5 16.5C3 17.76 3 20 3 20C3 20 5.24 20 6.5 18.5C7.21 17.79 7.21 16.21 6.5 15.5C5.79 14.79 4.21 14.79 3.5 15.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 15L17 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 12L4 7C3 6 3 4 3 4C3 4 5 4 6 5L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.5 14.5L16 16L21 11L19 9L14.5 14.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 9L18 6C19 5 21 5 21 5C21 5 21 7 20 8L17 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>전략기획팀</h3>
+                    <p>미래를 내다보는 전략으로 지속 가능한 성장을 설계합니다</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <span>동환그룹</span>
+                    <p>혁신으로 미래를 창조하는 기업</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>바로가기</h4>
+                        <ul>
+                            <li><a href="about.html">회사소개</a></li>
+                            <li><a href="business.html">사업영역</a></li>
+                            <li><a href="history.html">연혁</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>정보</h4>
+                        <ul>
+                            <li><a href="organization.html">조직도</a></li>
+                            <li><a href="contact.html">오시는 길</a></li>
+                            <li><a href="contact.html">연락처</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>연락처</h4>
+                        <ul>
+                            <li>02-1234-5678</li>
+                            <li>contact@donghwan.co.kr</li>
+                            <li>서울특별시 강남구</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 동환그룹. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

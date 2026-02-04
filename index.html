@@ -5,60 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>동환그룹 | DongHwan Group</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 커서 효과 -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- 로딩 화면 -->
+    <div class="loader">
+        <div class="loader-text">
+            <span>동</span>
+            <span>환</span>
+            <span>그</span>
+            <span>룹</span>
+        </div>
+    </div>
+
     <!-- 네비게이션 -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">동환그룹</a>
+            <a href="index.html" class="logo">
+                <span class="logo-text">동환그룹</span>
+            </a>
             <ul class="nav-menu">
-                <li><a href="#about">회사소개</a></li>
-                <li><a href="#vision">비전</a></li>
-                <li><a href="#business">사업영역</a></li>
-                <li><a href="#history">연혁</a></li>
-                <li><a href="#organization">조직도</a></li>
-                <li><a href="#location">오시는 길</a></li>
-                <li><a href="#contact">연락처</a></li>
+                <li><a href="about.html" data-text="회사소개">회사소개</a></li>
+                <li><a href="business.html" data-text="사업영역">사업영역</a></li>
+                <li><a href="history.html" data-text="연혁">연혁</a></li>
+                <li><a href="organization.html" data-text="조직도">조직도</a></li>
+                <li><a href="contact.html" data-text="연락처">연락처</a></li>
             </ul>
             <div class="hamburger">
-                <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
     </nav>
 
+    <!-- 모바일 메뉴 -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="about.html">회사소개</a></li>
+            <li><a href="business.html">사업영역</a></li>
+            <li><a href="history.html">연혁</a></li>
+            <li><a href="organization.html">조직도</a></li>
+            <li><a href="contact.html">연락처</a></li>
+        </ul>
+    </div>
+
     <!-- 히어로 섹션 -->
     <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+        </div>
         <div class="hero-content">
-            <h1>동환그룹</h1>
-            <p>혁신으로 미래를 창조하는 기업</p>
-            <a href="#about" class="btn-primary">자세히 보기</a>
+            <p class="hero-subtitle">INNOVATION FOR FUTURE</p>
+            <h1 class="hero-title">
+                <span class="title-line">혁신으로</span>
+                <span class="title-line">미래를 창조하는</span>
+                <span class="title-line highlight">동환그룹</span>
+            </h1>
+            <div class="hero-cta">
+                <a href="about.html" class="btn-primary">
+                    <span>회사소개</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="contact.html" class="btn-secondary">연락하기</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll</span>
         </div>
     </section>
 
-    <!-- 회사 소개 -->
-    <section id="about" class="section about">
+    <!-- 인트로 섹션 -->
+    <section class="intro">
         <div class="container">
-            <h2 class="section-title">회사 소개</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>신뢰와 혁신의 동환그룹</h3>
+            <div class="intro-content">
+                <div class="intro-text reveal">
+                    <span class="label">ABOUT US</span>
+                    <h2>신뢰와 혁신의 <br>동환그룹</h2>
                     <p>동환그룹은 고객의 가치를 최우선으로 생각하며, 끊임없는 혁신과 도전 정신으로 대한민국을 대표하는 기업으로 성장해 왔습니다.</p>
-                    <p>우리는 사람 중심의 경영 철학을 바탕으로 임직원, 고객, 사회 모두가 함께 성장하는 지속 가능한 미래를 만들어 갑니다.</p>
+                    <a href="about.html" class="link-arrow">
+                        자세히 보기
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">2024</span>
+                <div class="intro-stats reveal">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="2024">0</span>
                         <span class="stat-label">설립연도</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100+</span>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="100">0</span>
+                        <span class="stat-suffix">+</span>
                         <span class="stat-label">임직원</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">50+</span>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-suffix">+</span>
                         <span class="stat-label">파트너사</span>
                     </div>
                 </div>
@@ -66,194 +120,118 @@
         </div>
     </section>
 
-    <!-- 비전/미션 -->
-    <section id="vision" class="section vision">
+    <!-- 사업영역 프리뷰 -->
+    <section class="business-preview">
         <div class="container">
-            <h2 class="section-title">비전 & 미션</h2>
-            <div class="vision-content">
-                <div class="vision-card">
-                    <div class="vision-icon">🎯</div>
-                    <h3>VISION</h3>
-                    <p>글로벌 시장을 선도하는 혁신 기업</p>
-                </div>
-                <div class="vision-card">
-                    <div class="vision-icon">🚀</div>
-                    <h3>MISSION</h3>
-                    <p>고객 가치 창출과 지속 가능한 성장을 통해 더 나은 세상을 만든다</p>
-                </div>
-                <div class="vision-card">
-                    <div class="vision-icon">💡</div>
-                    <h3>CORE VALUES</h3>
-                    <p>혁신 · 신뢰 · 도전 · 상생</p>
-                </div>
+            <div class="section-header reveal">
+                <span class="label">BUSINESS</span>
+                <h2>사업 영역</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- 사업 영역 -->
-    <section id="business" class="section business">
-        <div class="container">
-            <h2 class="section-title">사업 영역</h2>
             <div class="business-grid">
-                <div class="business-card">
-                    <div class="business-icon">💻</div>
+                <a href="business.html" class="business-card reveal">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <h3>IT 솔루션</h3>
-                    <p>최첨단 기술을 활용한 맞춤형 IT 솔루션 제공</p>
-                </div>
-                <div class="business-card">
-                    <div class="business-icon">🏢</div>
+                    <p>최첨단 기술을 활용한 맞춤형 솔루션</p>
+                    <span class="card-arrow">→</span>
+                </a>
+                <a href="business.html" class="business-card reveal">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 21H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 21V7L13 3V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 21V11L13 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 9V9.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 12V12.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 15V15.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 18V18.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <h3>부동산 개발</h3>
                     <p>지속 가능한 도시 개발과 스마트 건축</p>
-                </div>
-                <div class="business-card">
-                    <div class="business-icon">📊</div>
+                    <span class="card-arrow">→</span>
+                </a>
+                <a href="business.html" class="business-card reveal">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 21H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 21V7L17 3H7L3 7V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 16L12 7L21 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <h3>컨설팅</h3>
                     <p>전문가 그룹의 경영 및 전략 컨설팅</p>
-                </div>
-                <div class="business-card">
-                    <div class="business-icon">🌱</div>
+                    <span class="card-arrow">→</span>
+                </a>
+                <a href="business.html" class="business-card reveal">
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 3V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 13L12 7L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 17C18 17 16 19 12 19C8 19 6 17 6 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <h3>친환경 에너지</h3>
                     <p>미래 세대를 위한 친환경 에너지 사업</p>
-                </div>
+                    <span class="card-arrow">→</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 연혁 -->
-    <section id="history" class="section history">
+    <!-- CTA 섹션 -->
+    <section class="cta">
         <div class="container">
-            <h2 class="section-title">연혁</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2024</div>
-                    <div class="timeline-content">
-                        <h3>동환그룹 설립</h3>
-                        <p>새로운 도전의 시작</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2024</div>
-                    <div class="timeline-content">
-                        <h3>IT 사업부 출범</h3>
-                        <p>디지털 혁신 사업 시작</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2025</div>
-                    <div class="timeline-content">
-                        <h3>사업 확장</h3>
-                        <p>컨설팅 및 부동산 사업 진출</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2026</div>
-                    <div class="timeline-content">
-                        <h3>글로벌 진출</h3>
-                        <p>해외 시장 진출 및 파트너십 확대</p>
-                    </div>
-                </div>
+            <div class="cta-content reveal">
+                <h2>함께 성장할 파트너를 찾습니다</h2>
+                <p>동환그룹과 함께 새로운 가치를 창출하세요</p>
+                <a href="contact.html" class="btn-primary light">
+                    <span>문의하기</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 조직도 -->
-    <section id="organization" class="section organization">
+    <!-- 푸터 -->
+    <footer class="footer">
         <div class="container">
-            <h2 class="section-title">조직도</h2>
-            <div class="org-chart">
-                <div class="org-level org-level-1">
-                    <div class="org-card chairman">
-                        <div class="org-avatar">👔</div>
-                        <h3>이인선</h3>
-                        <p>의장</p>
-                    </div>
-                </div>
-                <div class="org-connector"></div>
-                <div class="org-level org-level-2">
-                    <div class="org-card">
-                        <div class="org-avatar">📢</div>
-                        <h3>이재영</h3>
-                        <p>마케팅 팀장</p>
-                    </div>
-                    <div class="org-card">
-                        <div class="org-avatar">📋</div>
-                        <h3>조경민</h3>
-                        <p>비서</p>
-                    </div>
-                    <div class="org-card mascot">
-                        <div class="org-avatar">🐻</div>
-                        <h3>황승환</h3>
-                        <p>마스코트</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 오시는 길 -->
-    <section id="location" class="section location">
-        <div class="container">
-            <h2 class="section-title">오시는 길</h2>
-            <div class="location-content">
-                <div class="location-info">
-                    <div class="location-item">
-                        <span class="location-icon">📍</span>
-                        <div>
-                            <h4>주소</h4>
-                            <p>서울특별시 강남구 테헤란로 123 동환빌딩</p>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <span class="location-icon">🚇</span>
-                        <div>
-                            <h4>지하철</h4>
-                            <p>2호선 강남역 3번 출구 도보 5분</p>
-                        </div>
-                    </div>
-                    <div class="location-item">
-                        <span class="location-icon">🚌</span>
-                        <div>
-                            <h4>버스</h4>
-                            <p>동환그룹 정류장 하차</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="map-placeholder">
-                    <div class="map-box">
-                        <p>🗺️ 지도 영역</p>
-                        <small>실제 배포 시 Google Maps 또는 카카오맵 삽입</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 연락처 / Footer -->
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>동환그룹</h3>
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <span>동환그룹</span>
                     <p>혁신으로 미래를 창조하는 기업</p>
                 </div>
-                <div class="footer-section">
-                    <h4>연락처</h4>
-                    <p>📞 02-1234-5678</p>
-                    <p>📧 contact@donghwan.co.kr</p>
-                    <p>📠 02-1234-5679</p>
-                </div>
-                <div class="footer-section">
-                    <h4>운영시간</h4>
-                    <p>평일 09:00 - 18:00</p>
-                    <p>점심시간 12:00 - 13:00</p>
-                    <p>주말/공휴일 휴무</p>
-                </div>
-                <div class="footer-section">
-                    <h4>SNS</h4>
-                    <div class="social-links">
-                        <a href="#">📘 Facebook</a>
-                        <a href="#">📸 Instagram</a>
-                        <a href="#">🐦 Twitter</a>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>바로가기</h4>
+                        <ul>
+                            <li><a href="about.html">회사소개</a></li>
+                            <li><a href="business.html">사업영역</a></li>
+                            <li><a href="history.html">연혁</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>정보</h4>
+                        <ul>
+                            <li><a href="organization.html">조직도</a></li>
+                            <li><a href="contact.html">오시는 길</a></li>
+                            <li><a href="contact.html">연락처</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>연락처</h4>
+                        <ul>
+                            <li>02-1234-5678</li>
+                            <li>contact@donghwan.co.kr</li>
+                            <li>서울특별시 강남구</li>
+                        </ul>
                     </div>
                 </div>
             </div>
