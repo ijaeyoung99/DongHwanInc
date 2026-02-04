@@ -53,9 +53,13 @@
         </ul>
     </div>
 
+    <!-- 마우스 트레일 -->
+    <canvas id="mouse-trail"></canvas>
+
     <!-- 히어로 섹션 -->
     <section class="hero">
         <div class="hero-bg">
+            <canvas id="particles"></canvas>
             <div class="hero-shape shape-1"></div>
             <div class="hero-shape shape-2"></div>
             <div class="hero-shape shape-3"></div>
@@ -65,7 +69,7 @@
             <h1 class="hero-title">
                 <span class="title-line">혁신으로</span>
                 <span class="title-line">미래를 창조하는</span>
-                <span class="title-line highlight">동환그룹</span>
+                <span class="title-line highlight typing-text" data-text="동환그룹"></span>
             </h1>
             <div class="hero-cta">
                 <a href="about.html" class="btn-primary">
@@ -86,7 +90,7 @@
     </section>
 
     <!-- 인트로 섹션 -->
-    <section class="intro">
+    <section class="intro parallax-section" data-speed="0.3">
         <div class="container">
             <div class="intro-content">
                 <div class="intro-text reveal">
@@ -121,65 +125,109 @@
     </section>
 
     <!-- 사업영역 프리뷰 -->
-    <section class="business-preview">
+    <section class="business-preview parallax-section" data-speed="0.2">
         <div class="container">
             <div class="section-header reveal">
                 <span class="label">BUSINESS</span>
                 <h2>사업 영역</h2>
             </div>
             <div class="business-grid">
-                <a href="business.html" class="business-card reveal">
-                    <div class="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                <div class="flip-card reveal">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>IT 솔루션</h3>
+                            <p>최첨단 기술을 활용한 맞춤형 솔루션</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>IT 솔루션</h3>
+                            <ul>
+                                <li>클라우드 인프라</li>
+                                <li>AI/ML 개발</li>
+                                <li>빅데이터 분석</li>
+                            </ul>
+                            <a href="business.html" class="flip-btn">자세히 보기 →</a>
+                        </div>
                     </div>
-                    <h3>IT 솔루션</h3>
-                    <p>최첨단 기술을 활용한 맞춤형 솔루션</p>
-                    <span class="card-arrow">→</span>
-                </a>
-                <a href="business.html" class="business-card reveal">
-                    <div class="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                            <path d="M3 21H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M5 21V7L13 3V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M19 21V11L13 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 9V9.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 12V12.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 15V15.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 18V18.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                </div>
+                <div class="flip-card reveal">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 21H21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5 21V7L13 3V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M19 21V11L13 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>부동산 개발</h3>
+                            <p>지속 가능한 도시 개발과 스마트 건축</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>부동산 개발</h3>
+                            <ul>
+                                <li>스마트 빌딩</li>
+                                <li>친환경 주거단지</li>
+                                <li>도시 재생</li>
+                            </ul>
+                            <a href="business.html" class="flip-btn">자세히 보기 →</a>
+                        </div>
                     </div>
-                    <h3>부동산 개발</h3>
-                    <p>지속 가능한 도시 개발과 스마트 건축</p>
-                    <span class="card-arrow">→</span>
-                </a>
-                <a href="business.html" class="business-card reveal">
-                    <div class="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                            <path d="M21 21H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M21 21V7L17 3H7L3 7V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3 16L12 7L21 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                </div>
+                <div class="flip-card reveal">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 21H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21 21V7L17 3H7L3 7V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3 16L12 7L21 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>컨설팅</h3>
+                            <p>전문가 그룹의 경영 및 전략 컨설팅</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>컨설팅</h3>
+                            <ul>
+                                <li>경영 전략</li>
+                                <li>조직 혁신</li>
+                                <li>M&A 자문</li>
+                            </ul>
+                            <a href="business.html" class="flip-btn">자세히 보기 →</a>
+                        </div>
                     </div>
-                    <h3>컨설팅</h3>
-                    <p>전문가 그룹의 경영 및 전략 컨설팅</p>
-                    <span class="card-arrow">→</span>
-                </a>
-                <a href="business.html" class="business-card reveal">
-                    <div class="card-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 3V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M18 13L12 7L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M18 17C18 17 16 19 12 19C8 19 6 17 6 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                </div>
+                <div class="flip-card reveal">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 3V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18 13L12 7L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M18 17C18 17 16 19 12 19C8 19 6 17 6 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>친환경 에너지</h3>
+                            <p>미래 세대를 위한 친환경 에너지 사업</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>친환경 에너지</h3>
+                            <ul>
+                                <li>태양광 발전</li>
+                                <li>풍력 에너지</li>
+                                <li>ESS 구축</li>
+                            </ul>
+                            <a href="business.html" class="flip-btn">자세히 보기 →</a>
+                        </div>
                     </div>
-                    <h3>친환경 에너지</h3>
-                    <p>미래 세대를 위한 친환경 에너지 사업</p>
-                    <span class="card-arrow">→</span>
-                </a>
+                </div>
             </div>
         </div>
     </section>
